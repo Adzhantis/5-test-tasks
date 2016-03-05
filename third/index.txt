@@ -1,0 +1,10 @@
+1
+    SELECT DISTINCT art.*, com.updated_at as last_comment_time
+    FROM articles as art
+    INNER JOIN comments as com ON art.id = com.article_id
+    ORDER BY com.updated_at DESC;
+
+2
+    именно для этой выборки добавить в таблицу статьи еще 1 поле
+    last_comment_time и сохранять дату создания или обновления комментария
+    статьи
